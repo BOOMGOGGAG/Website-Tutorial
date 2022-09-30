@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table ตาราง</title>
+    <style>
+        div{
+            border:1px solid yellow;
+        }
+        span{
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <style>
+        div{
+            border:1px solid yellow; จะพอดีกับข้อความ
+        }
+        span{
+            border:1px solid blue; จะยืดจนสุดขอบกระดาษ
+        }
+        </style> 
+    -->
+    <!--การสร้างตาราง(Table)-->
+
+    <!--
+        <table></table> ใช้กำหนดสำหรับสร้างตาราง
+        <thead></thead> ใช้กำหนดกลุ่มเนื้อหาส่วนหัวตาราง
+        <tbody></tbody> ใช้กำหนดกลุ่มเนื้อหาตาราง
+        <tfoot></tfoot> ใช้กำหนดกลุ่มส่วนใต้ตาราง
+        <tr></tr> ใช้กำหนดแถวในตาราง
+        <td></td> กำหนดคอลัมน์
+        <th></th> กำหนดคอลัมน์ที่แสดงผลในส่วนหัวของตาราง
+    -->
+
+    <!--Attrubute ของตาราง-->
+    <!--
+        border="(ความหนา)" กำหนดเส้นขอบและความหนาของเส้นของตาราง ค่าเริ่มต้น=0
+        width="%" กำหนดความกว้างเป็น %
+        bgcolor="สี" กำหนดสีพื้นหลังในตาราง
+        <table bgcolor="สี"> กำหนดสีทั้งแถวและคอลัมน์
+        <tr bgcolor="สี"> สีของแถว
+        <td bgcolor="สี"> สีของคอลัมน์
+
+        colspan="x" รวมคอลัมน์ ค่า x คือ จำนวนคอลัมน์ที่ต้องการรวมเข้าด้วยกัน (ช่อง <td>)
+        rowspan="x" รวมแถว ค่า x คือ จำนวนแถวที่ต้องการรวมเข้าด้วยกัน
+        align="left,center,right" จัดตำแหน่งของภาพ หรืออักษรภายในช่องตาราง <td> ค่าปกติ คือ left
+        Cellpadding แสดงข้อมูลภายในตาราง หากมีค่ามากก๊จะมีพื้นที่การแสดงผลเป็นที่ว่างมากขึ้น โดยมีค่าเริ่มต้นเป็น 0 (หน่วย Pixel)
+        Cellspacing กำหนดขนาดเส้นตาราง หากมีค่ามากขึ้นเส้นตารางก็ จะมีขนาดมากตามไปด้วย โดยมีค่าเริ้มต้นเป็น 0 (หน่วย Pixel)
+    -->
+    <h1>รายการสินค้า</h1>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <thead>
+            <th>รหัสสินค้า</th>
+            <th>ภาพสินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>ราคา</th>
+            <th>ดำเนินการ</th>
+        </thead>
+        <tbody align="center">
+            <tr bgcolor="pink">
+                <td>P001</td>
+                <td>
+                    <img src="https://cdn.pixabay.com/photo/2016/08/18/20/01/food-1603759__340.jpg" alt="" width="50 px" height="50px">
+                </td>
+                <td bgcolor="red">ส้มตำ</td>
+                <td>150.00</td>
+                <td rowspan="2">
+                    <a href="#">สั่งซื้อ</a>
+                </td>
+            </tr>
+            <tr bgcolor="yellow">
+                <td>P002</td>
+                <td>
+                    <img src="https://cdn.pixabay.com/photo/2016/03/05/20/07/abstract-1238657__340.jpg" alt="" width="50 px" height="50px">
+                </td>
+                <td>สเต็ก</td>
+                <td>200</td>
+            </tr>
+            <tr></tr>
+        </tbody>
+        <tbody>
+            <tr align="right">
+                <td colspan="5"><strong>ราคารวม : 500 บาท</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--การจัดกลุ่มด้วย div,span-->
+    <!--
+        <span></span> ใช้จัดกลุ่มข้อความหรือแท็กต่างๆเข้าเป็นกลุ่มเดียวกันเพื่อกำหนด สี รูปแบบ หรือ style 
+        ให้กับข้อความและแท็กภายใต้ <span> ให้เป็นรูปแบบเดียวกัน
+        
+        <div></div> ใช้จัดกลุ่มข้อความหรือแท็กต่างๆเข้ากลุ่มเดียวกันลักษณะคล้ายๆกับ <span> แต่แตกต่างกัน
+        ตรงที่แท็ก div จะมีการขึ้นบรรทัดใหม่ก่อนเริ่มแสดงข้อความภายใต้แท็ก div
+    -->
+
+    <!--<span></span> ถ้าเขียนต่อกัน เรียงต่อกันเหมือนข้อความ-->
+    <span style="color:red">Songkiatchai</span>
+    <span style="color:green">Songkiatchai</span>
+
+    <br>
+
+    <!--<div></div>  ถ้าเขียนต่อกัน จะขึ้นบรรทัดใหม่-->
+    <div style="color:red">Songkiatchai</div>
+    <div style="color:green">Songkiatchai</div>
+</body>
+</html>
